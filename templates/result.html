@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解答</title>
+    <style>
+        /* 全体のスタイル設定 */
+        body {
+            background-image: url('../static/Image20250321211846.png'); /* 背景画像 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* ヘッダーとフッターに背景色を設定し、背景画像を適用しない */
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ヘッダーを画面の最上部に固定 */
+        header {
+            position: fixed;
+            top: 0;
+            padding: 15px 0;
+            font-size: 1.5em;
+        }
+
+        /* フッターを画面の最下部に固定 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            padding: 10px 0;
+            font-size: 1em;
+        }
+
+        /* コンテンツを中央に配置するためのコンテナ */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mathter</h1>
+    </header>
+    <div class="container">
+        <h2>解答</h2>
+        <p><strong>問題:</strong> {{ problem }}</p>
+        <p><strong>数式:</strong> {{ equation }}</p>
+        <p>🎯 解答:</p>
+        <p>{{ solution }}</p>
+        <a href="/">ホームへ戻る</a>
+    </div>
+    <footer>
+        <h1>©Nodatchi All Right</h1>
+    </footer>
+</body>
+</html>

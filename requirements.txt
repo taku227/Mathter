@@ -1,0 +1,9 @@
+Flask
+opencv-python
+numpy
+pytesseract
+easyocr
+torch
+Pillow
+transformers
+google-generativeai

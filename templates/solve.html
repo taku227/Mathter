@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題を入力</title>
+    <style>
+        /* 全体のスタイル設定 */
+        body {
+            background-image: url('../static/Image20250321211846.png'); /* 背景画像 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* ヘッダーとフッターに背景色を設定し、背景画像を適用しない */
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ヘッダーを画面の最上部に固定 */
+        header {
+            position: fixed;
+            top: 0;
+            padding: 15px 0;
+            font-size: 1.5em;
+        }
+
+        /* フッターを画面の最下部に固定 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            padding: 10px 0;
+            font-size: 1em;
+        }
+
+        /* コンテンツを中央に配置するためのコンテナ */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mathter</h1>
+    </header>
+    <div class="container">
+        <h2>問題を入力</h2>
+        <p>認識された数式: <strong>{{ equation }}</strong></p>
+        <img src="{{ image }}" width="300">
+        <form method="post">
+            <label>問題文を入力してください:</label>
+            <input type="text" name="problem" required>
+            <button type="submit">Go!</button>
+        </form>
+    </div>
+    <footer>
+        <h1>©Nodatchi All Right</h1>
+    </footer>
+</body>
+</html>
